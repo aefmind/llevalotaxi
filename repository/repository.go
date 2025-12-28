@@ -127,10 +127,9 @@ func (repo *Repository) ShowCallout(userId int64, featureName string) bool {
 }
 
 func (repo *Repository) DismissCallout(userId int64, featureName string) {
-	_, err := repo.db.Exec(`insert into dismissed_feature_callouts ("userId", "featureName") values ($1, $2) on conflict ("userId", "featureName") do nothing`, userId, featureName);
+	_, err := repo.db.Exec(`insert into dismissed_feature_callouts ("userId", "featureName") values ($1, $2) on conflict ("userId", "featureName") do nothing`, userId, featureName)
 	if err != nil {
-		log.Printf("Error while dismissing feature callout %s for user %d: %s", featureName, userId)
-		log.Println(err)
+		log.Printf("Error while dismissing feature callout %s for user %d: %s", featureName, userId, err)
 	}
 }
 
