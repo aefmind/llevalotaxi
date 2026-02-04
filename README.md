@@ -1,4 +1,8 @@
-# LibreTaxi v2
+# LlevaloTaxi
+
+LlevaloTaxi es un fork de LibreTaxi v2, que añade soporte para WhatsApp.
+
+---
 
 LibreTaxi is open-source Uber proof-of-concept that works through [Telegram](https://telegram.org/).
 
